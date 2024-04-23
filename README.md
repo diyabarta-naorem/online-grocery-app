@@ -1,4 +1,4 @@
-# Online Grocery App - Chingak Shang 
+# Chingak Shang - Online Grocery Web App  
 
 
 ### `Description:`
