@@ -4,6 +4,7 @@ import Slider from "./_components/Slider";
 import GlobalApi from "./_utils/GlobalApi";
 import CategoryList from "./_components/CategoryList";
 import ProductList from "./_components/ProductList";
+import Footer from "./_components/Footer";
 
 export default async function Home() {
   const sliderList = await GlobalApi.getSliders();
@@ -22,6 +23,15 @@ export default async function Home() {
 
       {/* Product List */}
       <ProductList productList={productList}/>
+
+      {/* Banner */}
+      <Image src='/banner1.png' width={1000} height={300}
+      alt="banner"
+      className="w-full h-[400px] object-contain mt-10 border rounded-2xl"
+      />
+
+      {/* Footer */}
+      <Footer/>
     </div>
   );
 }

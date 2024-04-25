@@ -837,8 +837,8 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    description: Attribute.String;
+    name: Attribute.Text;
+    description: Attribute.Text;
     mrp: Attribute.Decimal;
     sellingPrice: Attribute.Decimal;
     itemQuantityType: Attribute.String;

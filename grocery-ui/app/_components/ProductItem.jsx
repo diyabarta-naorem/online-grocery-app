@@ -30,7 +30,7 @@ function ProductItem({ product }) {
           {product.attributes.sellingPrice&&
           <h2 className="font-bold text-lg">₹{product.attributes.sellingPrice}</h2>}
           <h2 className={`font-bold text-lg ${product.attributes.sellingPrice&& 'line-through text-gray-500'}`}>₹{product.attributes.mrp}</h2> 
-        </div>
+        </div> 
         <Button variant="outline"
         className="text-primary hover:text-white hover:bg-primary">Add to cart</Button>
     </div>
