@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { Layout, LayoutGrid, Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import GlobalApi from "../_utils/GlobalApi";
+import Link from "next/link";
 
 function Header() {
   const [categoryList, setCategoryList] = useState([]);
@@ -31,7 +32,9 @@ function Header() {
   return (
     <div className="p-5 shadow-md flex justify-between">
       <div className="flex items-center gap-8">
-        <Image src="/logo3.png" alt="logo" width={110} height={110} />
+        <Link href={'/'}>
+          <Image src="/logo_final_1.png" alt="logo" width={90} height={90} />
+        </Link>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <h2
@@ -45,16 +48,22 @@ function Header() {
             <DropdownMenuLabel>Browse Category</DropdownMenuLabel>
             <DropdownMenuSeparator />
             {categoryList.map((category, index) => (
-              <DropdownMenuItem key={index} className="flex gap-4 items-center cursor-pointer">
-                <Image src={`
+              <Link href={"/products-category/" + category.attributes.name}>
+                <DropdownMenuItem
+                  key={index}
+                  className="flex gap-4 items-center cursor-pointer"
+                >
+                  <Image
+                    src={`
                   ${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}${category?.attributes?.icon?.data[0]?.attributes?.url}`}
-                  unoptimized={true} 
-                alt='icon'
-                width={27}
-                height={27}
-                />
-                <h2 className="text-lg">{category?.attributes?.name}</h2>
-              </DropdownMenuItem>
+                    unoptimized={true}
+                    alt="icon"
+                    width={27}
+                    height={27}
+                  />
+                  <h2 className="text-lg">{category?.attributes?.name}</h2>
+                </DropdownMenuItem>
+              </Link>
             ))}
           </DropdownMenuContent>
         </DropdownMenu>

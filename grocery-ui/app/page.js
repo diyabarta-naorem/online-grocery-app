@@ -25,9 +25,9 @@ export default async function Home() {
       <ProductList productList={productList}/>
 
       {/* Banner */}
-      <Image src='/banner1.png' width={1000} height={300}
+      <Image src='/temp5.png' width={1000} height={300}
       alt="banner"
-      className="w-full h-[400px] object-contain mt-10 border rounded-2xl"
+      className="w-full h-fit md:h-[400px]  mt-10 border rounded-2xl object-contain md:object-cover"
       />
 
       {/* Footer */}

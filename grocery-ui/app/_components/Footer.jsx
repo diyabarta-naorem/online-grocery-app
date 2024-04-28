@@ -6,7 +6,7 @@ function Footer() {
     <footer className="bg-gray-100 mt-7">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
-          <Image src='/logo3.svg' width={200} height={300} alt="logo"/>
+          <Image src='/logo_final_1.png' width={90} height={90} alt="logo"/>
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
