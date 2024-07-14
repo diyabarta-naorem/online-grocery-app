@@ -32,7 +32,7 @@ function Header() {
   return (
     <div className="p-5 shadow-md flex justify-between">
       <div className="flex items-center gap-8">
-        <Link href={'/'}>
+        <Link href={"/"}>
           <Image src="/logo_final_1.png" alt="logo" width={90} height={90} />
         </Link>
         <DropdownMenu>
@@ -73,11 +73,19 @@ function Header() {
           <input type="text" placeholder="Search" className="outline-none" />
         </div>
       </div>
-      <div className="flex gap-5 items-center">
-        <h2 className="flex gap-2 text-xl">
-          <ShoppingCart />0
+      <div className="flex gap-5 items-center ">
+        <h2 className="flex gap-2 text-xl font-bold text-green-700">
+          <Link href={"/cart-display"}>
+            <ShoppingCart />
+            <div className="rounded-full border-2 border-green-700 mx-auto pl-1">
+              {" "}
+              3
+            </div>
+          </Link>
         </h2>
-        <Button>Login</Button>
+        <Link href={"/sign-in"}>
+          <Button>Login</Button>
+        </Link>
       </div>
     </div>
   );

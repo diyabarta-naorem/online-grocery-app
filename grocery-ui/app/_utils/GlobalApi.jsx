@@ -1,10 +1,8 @@
 const { default: axios } = require("axios");
 
 const axiosClient = axios.create({
-  // baseURL:'http://192.168.29.111:1337/api'
-  // baseURL:'http://192.168.147.197:1337/api'
-//   baseURL: "http://192.168.1.4:1337/api",
-  baseURL: "http://192.168.242.197:1337/api",
+  baseURL: "http://192.168.139.197:1337/api",
+  // baseURL: "http://192.168.201.197:1337/api",
 });
 
 const getCategory = () => axiosClient.get("/categories?populate=*");
@@ -31,10 +29,18 @@ const getProductsByCategory = (category) =>
     return resp.data.data
   })
 
+
+const registerUser=(username, email, password)=>axiosClient.post('/auth/local/register',{
+  username:username,
+  email:email,
+  password:password
+});
+
 export default {
   getCategory,
   getSliders,
   getCategoryList,
   getAllProducts,
   getProductsByCategory,
+  registerUser
 };

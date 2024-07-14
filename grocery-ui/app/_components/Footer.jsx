@@ -6,13 +6,9 @@ function Footer() {
     <footer className="bg-gray-100 mt-7">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
-          <Image src='/logo_final_1.png' width={90} height={90} alt="logo"/>
+          <Image src='/logo_final_1.png' width={150} height={150} alt="logo"/>
         </div>
 
-        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-          consequuntur amet culpa cum itaque neque.
-        </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
@@ -35,15 +31,7 @@ function Footer() {
             </a>
           </li>
 
-          <li>
-            <a
-              className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
-            >
-              {" "}
-              History{" "}
-            </a>
-          </li>
+          
 
           <li>
             <a
@@ -65,15 +53,6 @@ function Footer() {
             </a>
           </li>
 
-          <li>
-            <a
-              className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
-            >
-              {" "}
-              Blog{" "}
-            </a>
-          </li>
         </ul>
 
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
@@ -188,6 +167,12 @@ function Footer() {
             </a>
           </li>
         </ul>
+        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-400">
+        Conditions of Use & Sale
+        Privacy Notice
+        Interest-Based Ads
+        © 2024, chinjakShang.com, Inc. or its affiliates
+        </p>
       </div>
     </footer>
   );
